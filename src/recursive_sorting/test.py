@@ -1,3 +1,9 @@
+def test(arr):
+    for x in arr:
+        print("hello")
+
+test([1,2,3])
+
 def merge(arrA, arrB):
     s = []
     #set index start point
@@ -17,21 +23,4 @@ def merge(arrA, arrB):
         s.extend(arrA[arrA_idx:])
     return s
 
-# TO-DO: implement the Merge Sort function below USING RECURSION
-def merge_sort( arr ):
-    # TO-DO
-    result = arr
-    #if 1 element is passed its already sorted
-    if len(arr) > 1:
-        mid = len(arr) // 2
-        first_h = arr[:mid]
-        second_h = arr[mid:]
-
-        X = merge_sort(first_h)
-        Y = merge_sort(second_h)
-
-        result = merge(X, Y)
-
-    return result
-
-merge_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7])
+merge([1,3,5],[2,4,6])
